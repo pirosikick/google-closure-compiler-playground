@@ -1,13 +1,13 @@
-goog.module("app.sayHi"); // 提供するオブジェクトの宣言
+goog.provide("app.sayHi"); // 提供するオブジェクトの宣言
 
-const dom = goog.require("goog.dom");
-const TagName = goog.require("goog.dom.TagName");
+goog.require("goog.dom");
+goog.require("goog.dom.TagName");
 
-exports = function sayHi() {
-  var newHeader = dom.createDom(
-    TagName.H1,
+app.sayHi = function sayHi() {
+  var newHeader = goog.dom.createDom(
+    goog.dom.TagName.H1,
     { style: "background-color:#EEE" },
     "Hello world!"
   );
-  dom.appendChild(document.body, newHeader);
+  goog.dom.appendChild(document.body, newHeader);
 };
