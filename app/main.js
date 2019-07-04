@@ -1,3 +1,5 @@
-goog.require("app.sayHi"); // 必要とするオブジェクトの宣言
+goog.module("app.main");
 
-document.body.onload = () => app.sayHi();
+const hello = goog.require("app.hello"); // 必要とするオブジェクトの宣言
+
+hello.sayHi();

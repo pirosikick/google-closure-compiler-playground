@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "run-s make-deps webpack serve",
+    "start": "run-s make-deps serve",
     "webpack": "webpack --mode development",
     "serve": "http-server .",
-    "make-deps": "closure-make-deps -r app --closure-path node_modules/google-closure-library/closure/goog --validate false > app/deps.js"
+    "make-deps": "closure-make-deps -r app --closure-path node_modules/google-closure-library/closure/goog --validate false > build/deps.js"
   },
   "repository": {
     "type": "git",
